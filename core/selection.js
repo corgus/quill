@@ -273,7 +273,7 @@ class Selection {
     if (startNode != null) {
       // MODIFIED - SPOTSAGA
       // if (!this.hasFocus()) this.root.focus();
-      console.log('root.focus skipped!')
+      // console.log('root.focus skipped!')
 
       let native = (this.getNativeRange() || {}).native;
       if (native == null || force ||
