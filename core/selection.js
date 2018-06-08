@@ -271,7 +271,10 @@ class Selection {
     let selection = document.getSelection();
     if (selection == null) return;
     if (startNode != null) {
-      if (!this.hasFocus()) this.root.focus();
+      // MODIFIED - SPOTSAGA
+      // if (!this.hasFocus()) this.root.focus();
+      console.log('root.focus skipped!')
+
       let native = (this.getNativeRange() || {}).native;
       if (native == null || force ||
           startNode !== native.startContainer ||
