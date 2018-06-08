@@ -2875,7 +2875,7 @@ var Selection = function () {
     key: 'focus',
     value: function focus() {
       if (this.hasFocus()) return;
-      this.root.focus();
+      // this.root.focus();
       this.setRange(this.savedRange);
     }
   }, {
@@ -9916,7 +9916,7 @@ var SnowTooltip = function (_BaseTooltip) {
       this.root.querySelector('a.ql-remove').addEventListener('click', function (event) {
         if (_this3.linkRange != null) {
           var range = _this3.linkRange;
-          _this3.restoreFocus();
+          // this.restoreFocus();
           _this3.quill.formatText(range, 'link', false, _emitter2.default.sources.USER);
           delete _this3.linkRange;
         }
