@@ -15,6 +15,7 @@
     "ui",
     "dist/quill.bubble.css",
     "dist/quill.snow.css",
+    "dist/quill.spot.css",
     "dist/quill.core.css",
     "dist/quill.js",
     "dist/quill.core.js",
@@ -79,7 +80,7 @@
     "url": "https://github.com/quilljs/quill/issues"
   },
   "scripts": {
-    "build": "webpack --config _develop/webpack.config.js; rm dist/quill.core dist/quill.bubble dist/quill.snow;",
+    "build": "webpack --config _develop/webpack.config.js; rm dist/quill.core dist/quill.bubble dist/quill.snow dist/quill.spot;",
     "build:release": "./_develop/scripts/release.sh",
     "start": "npm run build; bundle exec foreman start -f _develop/procfile",
     "test": "npm run test:unit",
