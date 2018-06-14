@@ -2316,6 +2316,7 @@ var Selection = function () {
   }, {
     key: 'focusNow',
     value: function focusNow() {
+      console.log('focusNow', this.root, this.savedRange); // eslint-disable-line no-console
       this.root.blur();
       this.root.focus();
       this.setRange(this.savedRange);
