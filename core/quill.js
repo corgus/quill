@@ -139,16 +139,16 @@ class Quill {
   }
 
   focus() {
-    let scrollTop = this.scrollingContainer.scrollTop;
     this.selection.focus();
-    this.scrollingContainer.scrollTop = scrollTop;
-    this.scrollIntoView();
+    // let scrollTop = this.scrollingContainer.scrollTop;
+    // this.scrollingContainer.scrollTop = scrollTop;
+    // this.scrollIntoView();
   }
 
-  focusOnSelection() {
-    console.log('focusOnSelection', this.selection) // eslint-disable-line no-console
-    this.selection.focusNow();
-  }
+  // focusOnSelection() {
+  //   console.log('focusOnSelection', this.selection) // eslint-disable-line no-console
+  //   this.selection.focusNow();
+  // }
 
   format(name, value, source = Emitter.sources.API) {
     return modify.call(this, () => {

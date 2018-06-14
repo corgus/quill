@@ -1185,17 +1185,17 @@ var Quill = function () {
   }, {
     key: 'focus',
     value: function focus() {
-      var scrollTop = this.scrollingContainer.scrollTop;
       this.selection.focus();
-      this.scrollingContainer.scrollTop = scrollTop;
-      this.scrollIntoView();
+      // let scrollTop = this.scrollingContainer.scrollTop;
+      // this.scrollingContainer.scrollTop = scrollTop;
+      // this.scrollIntoView();
     }
-  }, {
-    key: 'focusOnSelection',
-    value: function focusOnSelection() {
-      console.log('focusOnSelection', this.selection); // eslint-disable-line no-console
-      this.selection.focusNow();
-    }
+
+    // focusOnSelection() {
+    //   console.log('focusOnSelection', this.selection) // eslint-disable-line no-console
+    //   this.selection.focusNow();
+    // }
+
   }, {
     key: 'format',
     value: function format(name, value) {
@@ -2314,23 +2314,20 @@ var Selection = function () {
       // this.root.focus();
       this.setRange(this.savedRange);
     }
-  }, {
-    key: 'focusNow',
-    value: function focusNow() {
-      console.log('focusNow', this.root, this.savedRange); // eslint-disable-line no-console
-      if (this.savedRange) {
-        this.root.selectionStart = this.savedRange.index;
-        this.root.selectionEnd = this.savedRange.index + this.savedRange.length;
-        console.log('savedRange:', this.root.selectionStart, this.root.selectionEnd); // eslint-disable-line no-console
-      } else {
-        // this.root.selectionStart = this.root.selectionEnd = this.savedRange.index
-        console.log('no savedRange:', this.root.selectionStart, this.root.selectionEnd); // eslint-disable-line no-console
-      }
-      this.root.blur();
-      this.root.focus();
 
-      this.setRange(this.savedRange);
-    }
+    // focusNow() {
+    //   console.log('focusNow', this.root, this.savedRange) // eslint-disable-line no-console
+    //   if (this.savedRange) {
+    //     // this.root.selectionStart = this.savedRange.index
+    //     // this.root.selectionEnd = this.savedRange.index + this.savedRange.length
+    //     console.log('savedRange:', this.root.selectionStart, this.root.selectionEnd) // eslint-disable-line no-console
+    //   }
+    //   this.root.blur()
+    //   this.root.focus();
+
+    //   this.setRange(this.savedRange);
+    // }
+
   }, {
     key: 'format',
     value: function format(_format, value) {
