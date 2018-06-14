@@ -6,19 +6,19 @@ import { Range } from '../core/selection';
 import icons from '../ui/icons';
 
 
-// const TOOLBAR_CONFIG = [
-//   [{ header: ['1', '2', '3', false] }],
-//   ['bold', 'italic', 'underline', 'link'],
-//   [{ list: 'ordered' }, { list: 'bullet' }],
-//   ['clean']
-// ];
+const TOOLBAR_CONFIG = [
+  [{ header: ['1', '2', '3', false] }],
+  ['bold', 'italic', 'underline', 'link'],
+  [{ list: 'ordered' }, { list: 'bullet' }],
+  ['clean']
+];
 
 // note: based on SnowTheme
 class SpotTheme extends BaseTheme {
   constructor(quill, options) {
-    // if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
-    //   options.modules.toolbar.container = TOOLBAR_CONFIG;
-    // }
+    if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
+      options.modules.toolbar.container = TOOLBAR_CONFIG;
+    }
     super(quill, options);
     this.quill.container.classList.add('ql-spot');
   }

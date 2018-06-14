@@ -91,7 +91,9 @@ class Selection {
   }
 
   focusNow() {
+    this.root.blur()
     this.root.focus();
+    this.setRange(this.savedRange);
   }
 
   format(format, value) {

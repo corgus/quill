@@ -2316,7 +2316,9 @@ var Selection = function () {
   }, {
     key: 'focusNow',
     value: function focusNow() {
+      this.root.blur();
       this.root.focus();
+      this.setRange(this.savedRange);
     }
   }, {
     key: 'format',
@@ -11542,25 +11544,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-// const TOOLBAR_CONFIG = [
-//   [{ header: ['1', '2', '3', false] }],
-//   ['bold', 'italic', 'underline', 'link'],
-//   [{ list: 'ordered' }, { list: 'bullet' }],
-//   ['clean']
-// ];
+var TOOLBAR_CONFIG = [[{ header: ['1', '2', '3', false] }], ['bold', 'italic', 'underline', 'link'], [{ list: 'ordered' }, { list: 'bullet' }], ['clean']];
 
 // note: based on SnowTheme
+
 var SpotTheme = function (_BaseTheme) {
   _inherits(SpotTheme, _BaseTheme);
 
   function SpotTheme(quill, options) {
     _classCallCheck(this, SpotTheme);
 
-    var _this = _possibleConstructorReturn(this, (SpotTheme.__proto__ || Object.getPrototypeOf(SpotTheme)).call(this, quill, options));
-    // if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
-    //   options.modules.toolbar.container = TOOLBAR_CONFIG;
-    // }
+    if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
+      options.modules.toolbar.container = TOOLBAR_CONFIG;
+    }
 
+    var _this = _possibleConstructorReturn(this, (SpotTheme.__proto__ || Object.getPrototypeOf(SpotTheme)).call(this, quill, options));
 
     _this.quill.container.classList.add('ql-spot');
     return _this;

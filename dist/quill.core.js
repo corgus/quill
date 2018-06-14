@@ -2316,7 +2316,9 @@ var Selection = function () {
   }, {
     key: 'focusNow',
     value: function focusNow() {
+      this.root.blur();
       this.root.focus();
+      this.setRange(this.savedRange);
     }
   }, {
     key: 'format',
