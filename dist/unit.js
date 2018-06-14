@@ -2318,8 +2318,17 @@ var Selection = function () {
     key: 'focusNow',
     value: function focusNow() {
       console.log('focusNow', this.root, this.savedRange); // eslint-disable-line no-console
+      if (this.savedRange) {
+        this.root.selectionStart = this.savedRange.index;
+        this.root.selectionEnd = this.savedRange.index + this.savedRange.length;
+        console.log('savedRange:', this.root.selectionStart, this.root.selectionEnd); // eslint-disable-line no-console
+      } else {
+        // this.root.selectionStart = this.root.selectionEnd = this.savedRange.index
+        console.log('no savedRange:', this.root.selectionStart, this.root.selectionEnd); // eslint-disable-line no-console
+      }
       this.root.blur();
       this.root.focus();
+
       this.setRange(this.savedRange);
     }
   }, {
