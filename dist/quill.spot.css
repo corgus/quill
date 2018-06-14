@@ -845,36 +845,36 @@
 .ql-spot .ql-color-picker.ql-color .ql-picker-item {
   background-color: #000;
 }
-.ql-toolbar.ql-snow {
+.ql-toolbar.ql-spot {
   border: 1px solid #ccc;
   box-sizing: border-box;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   padding: 8px;
 }
-.ql-toolbar.ql-snow .ql-formats {
+.ql-toolbar.ql-spot .ql-formats {
   margin-right: 15px;
 }
-.ql-toolbar.ql-snow .ql-picker-label {
+.ql-toolbar.ql-spot .ql-picker-label {
   border: 1px solid transparent;
 }
-.ql-toolbar.ql-snow .ql-picker-options {
+.ql-toolbar.ql-spot .ql-picker-options {
   border: 1px solid transparent;
   box-shadow: rgba(0,0,0,0.2) 0 2px 8px;
 }
-.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+.ql-toolbar.ql-spot .ql-picker.ql-expanded .ql-picker-label {
   border-color: #ccc;
 }
-.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+.ql-toolbar.ql-spot .ql-picker.ql-expanded .ql-picker-options {
   border-color: #ccc;
 }
-.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
-.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+.ql-toolbar.ql-spot .ql-color-picker .ql-picker-item.ql-selected,
+.ql-toolbar.ql-spot .ql-color-picker .ql-picker-item:hover {
   border-color: #000;
 }
-.ql-toolbar.ql-snow + .ql-container.ql-snow {
+.ql-toolbar.ql-spot + .ql-container.ql-spot {
   border-top: 0px;
 }
-.ql-snow .ql-tooltip {
+.ql-spot .ql-tooltip {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 5px #ddd;
@@ -882,12 +882,12 @@
   padding: 5px 12px;
   white-space: nowrap;
 }
-.ql-snow .ql-tooltip::before {
+.ql-spot .ql-tooltip::before {
   content: "Visit URL:";
   line-height: 26px;
   margin-right: 8px;
 }
-.ql-snow .ql-tooltip input[type=text] {
+.ql-spot .ql-tooltip input[type=text] {
   display: none;
   border: 1px solid #ccc;
   font-size: 13px;
@@ -896,45 +896,45 @@
   padding: 3px 5px;
   width: 170px;
 }
-.ql-snow .ql-tooltip a.ql-preview {
+.ql-spot .ql-tooltip a.ql-preview {
   display: inline-block;
   max-width: 200px;
   overflow-x: hidden;
   text-overflow: ellipsis;
   vertical-align: top;
 }
-.ql-snow .ql-tooltip a.ql-action::after {
+.ql-spot .ql-tooltip a.ql-action::after {
   border-right: 1px solid #ccc;
   content: 'Edit';
   margin-left: 16px;
   padding-right: 8px;
 }
-.ql-snow .ql-tooltip a.ql-remove::before {
+.ql-spot .ql-tooltip a.ql-remove::before {
   content: 'Remove';
   margin-left: 8px;
 }
-.ql-snow .ql-tooltip a {
+.ql-spot .ql-tooltip a {
   line-height: 26px;
 }
-.ql-snow .ql-tooltip.ql-editing a.ql-preview,
-.ql-snow .ql-tooltip.ql-editing a.ql-remove {
+.ql-spot .ql-tooltip.ql-editing a.ql-preview,
+.ql-spot .ql-tooltip.ql-editing a.ql-remove {
   display: none;
 }
-.ql-snow .ql-tooltip.ql-editing input[type=text] {
+.ql-spot .ql-tooltip.ql-editing input[type=text] {
   display: inline-block;
 }
-.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+.ql-spot .ql-tooltip.ql-editing a.ql-action::after {
   border-right: 0px;
   content: 'Save';
   padding-right: 0px;
 }
-.ql-snow .ql-tooltip[data-mode=link]::before {
+.ql-spot .ql-tooltip[data-mode=link]::before {
   content: "Enter link:";
 }
-.ql-snow .ql-tooltip[data-mode=formula]::before {
+.ql-spot .ql-tooltip[data-mode=formula]::before {
   content: "Enter formula:";
 }
-.ql-snow .ql-tooltip[data-mode=video]::before {
+.ql-spot .ql-tooltip[data-mode=video]::before {
   content: "Enter video:";
 }
 .ql-spot a {

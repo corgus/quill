@@ -1193,6 +1193,7 @@ var Quill = function () {
   }, {
     key: 'focusOnSelection',
     value: function focusOnSelection() {
+      console.log('focusOnSelection', this.selection); // eslint-disable-line no-console
       this.selection.focusNow();
     }
   }, {

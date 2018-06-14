@@ -146,7 +146,8 @@ class Quill {
   }
 
   focusOnSelection() {
-    this.selection.focusNow()
+    console.log('focusOnSelection', this.selection) // eslint-disable-line no-console
+    this.selection.focusNow();
   }
 
   format(name, value, source = Emitter.sources.API) {
