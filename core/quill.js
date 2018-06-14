@@ -145,6 +145,10 @@ class Quill {
     this.scrollIntoView();
   }
 
+  focusOnSelection() {
+    this.selection.focusNow()
+  }
+
   format(name, value, source = Emitter.sources.API) {
     return modify.call(this, () => {
       let range = this.getSelection(true);

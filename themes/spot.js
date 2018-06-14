@@ -16,15 +16,15 @@ const TOOLBAR_CONFIG = [
 // note: based on SnowTheme
 class SpotTheme extends BaseTheme {
   constructor(quill, options) {
-    if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
-      options.modules.toolbar.container = TOOLBAR_CONFIG;
-    }
+    // if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
+    //   options.modules.toolbar.container = TOOLBAR_CONFIG;
+    // }
     super(quill, options);
-    this.quill.container.classList.add('ql-snow');
+    this.quill.container.classList.add('ql-spot');
   }
 
   extendToolbar(toolbar) {
-    toolbar.container.classList.add('ql-snow');
+    toolbar.container.classList.add('ql-spot');
     this.buildButtons([].slice.call(toolbar.container.querySelectorAll('button')), icons);
     this.buildPickers([].slice.call(toolbar.container.querySelectorAll('select')), icons);
     this.tooltip = new SpotTooltip(this.quill, this.options.bounds);
@@ -35,6 +35,7 @@ class SpotTheme extends BaseTheme {
     }
   }
 }
+
 SpotTheme.DEFAULTS = extend(true, {}, BaseTheme.DEFAULTS, {
   modules: {
     toolbar: {

@@ -90,6 +90,10 @@ class Selection {
     this.setRange(this.savedRange);
   }
 
+  focusNow() {
+    this.root.focus();
+  }
+
   format(format, value) {
     if (this.scroll.whitelist != null && !this.scroll.whitelist[format]) return;
     this.scroll.update();
