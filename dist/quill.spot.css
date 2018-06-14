@@ -937,9 +937,9 @@
 .ql-snow .ql-tooltip[data-mode=video]::before {
   content: "Enter video:";
 }
-.ql-snow a {
+.ql-spot a {
   color: #06c;
 }
-.ql-container.ql-snow {
+.ql-container.ql-spot {
   border: 1px solid #ccc;
 }

@@ -1191,6 +1191,11 @@ var Quill = function () {
       this.scrollIntoView();
     }
   }, {
+    key: 'focusOnSelection',
+    value: function focusOnSelection() {
+      this.selection.focusNow();
+    }
+  }, {
     key: 'format',
     value: function format(name, value) {
       var _this4 = this;
@@ -2307,6 +2312,11 @@ var Selection = function () {
       if (this.hasFocus()) return;
       // this.root.focus();
       this.setRange(this.savedRange);
+    }
+  }, {
+    key: 'focusNow',
+    value: function focusNow() {
+      this.root.focus();
     }
   }, {
     key: 'format',

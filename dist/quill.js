@@ -1191,6 +1191,11 @@ var Quill = function () {
       this.scrollIntoView();
     }
   }, {
+    key: 'focusOnSelection',
+    value: function focusOnSelection() {
+      this.selection.focusNow();
+    }
+  }, {
     key: 'format',
     value: function format(name, value) {
       var _this4 = this;
@@ -2307,6 +2312,11 @@ var Selection = function () {
       if (this.hasFocus()) return;
       // this.root.focus();
       this.setRange(this.savedRange);
+    }
+  }, {
+    key: 'focusNow',
+    value: function focusNow() {
+      this.root.focus();
     }
   }, {
     key: 'format',
@@ -11532,30 +11542,34 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TOOLBAR_CONFIG = [[{ header: ['1', '2', '3', false] }], ['bold', 'italic', 'underline', 'link'], [{ list: 'ordered' }, { list: 'bullet' }], ['clean']];
+// const TOOLBAR_CONFIG = [
+//   [{ header: ['1', '2', '3', false] }],
+//   ['bold', 'italic', 'underline', 'link'],
+//   [{ list: 'ordered' }, { list: 'bullet' }],
+//   ['clean']
+// ];
 
 // note: based on SnowTheme
-
 var SpotTheme = function (_BaseTheme) {
   _inherits(SpotTheme, _BaseTheme);
 
   function SpotTheme(quill, options) {
     _classCallCheck(this, SpotTheme);
 
-    if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
-      options.modules.toolbar.container = TOOLBAR_CONFIG;
-    }
-
     var _this = _possibleConstructorReturn(this, (SpotTheme.__proto__ || Object.getPrototypeOf(SpotTheme)).call(this, quill, options));
+    // if (options.modules.toolbar != null && options.modules.toolbar.container == null) {
+    //   options.modules.toolbar.container = TOOLBAR_CONFIG;
+    // }
 
-    _this.quill.container.classList.add('ql-snow');
+
+    _this.quill.container.classList.add('ql-spot');
     return _this;
   }
 
   _createClass(SpotTheme, [{
     key: 'extendToolbar',
     value: function extendToolbar(toolbar) {
-      toolbar.container.classList.add('ql-snow');
+      toolbar.container.classList.add('ql-spot');
       this.buildButtons([].slice.call(toolbar.container.querySelectorAll('button')), _icons2.default);
       this.buildPickers([].slice.call(toolbar.container.querySelectorAll('select')), _icons2.default);
       this.tooltip = new SpotTooltip(this.quill, this.options.bounds);
