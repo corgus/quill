@@ -140,15 +140,7 @@ class Quill {
 
   focus() {
     this.selection.focus();
-    // let scrollTop = this.scrollingContainer.scrollTop;
-    // this.scrollingContainer.scrollTop = scrollTop;
-    // this.scrollIntoView();
   }
-
-  // focusOnSelection() {
-  //   console.log('focusOnSelection', this.selection) // eslint-disable-line no-console
-  //   this.selection.focusNow();
-  // }
 
   format(name, value, source = Emitter.sources.API) {
     return modify.call(this, () => {

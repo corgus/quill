@@ -1186,16 +1186,7 @@ var Quill = function () {
     key: 'focus',
     value: function focus() {
       this.selection.focus();
-      // let scrollTop = this.scrollingContainer.scrollTop;
-      // this.scrollingContainer.scrollTop = scrollTop;
-      // this.scrollIntoView();
     }
-
-    // focusOnSelection() {
-    //   console.log('focusOnSelection', this.selection) // eslint-disable-line no-console
-    //   this.selection.focusNow();
-    // }
-
   }, {
     key: 'format',
     value: function format(name, value) {
@@ -8937,15 +8928,15 @@ var Clipboard = function (_Module) {
       if (e.defaultPrevented || !this.quill.isEnabled()) return;
       var range = this.quill.getSelection();
       var delta = new _quillDelta2.default().retain(range.index);
-      var scrollTop = this.quill.scrollingContainer.scrollTop;
-      this.container.focus();
+      // let scrollTop = this.quill.scrollingContainer.scrollTop;
+      // this.container.focus();
       this.quill.selection.update(_quill2.default.sources.SILENT);
       setTimeout(function () {
         delta = delta.concat(_this2.convert()).delete(range.length);
         _this2.quill.updateContents(delta, _quill2.default.sources.USER);
         // range.length contributes to delta.length()
         _this2.quill.setSelection(delta.length() - range.length, _quill2.default.sources.SILENT);
-        _this2.quill.scrollingContainer.scrollTop = scrollTop;
+        // this.quill.scrollingContainer.scrollTop = scrollTop;
         _this2.quill.focus();
       }, 1);
     }
