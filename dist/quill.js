@@ -2304,6 +2304,7 @@ var Selection = function () {
       if (this.hasFocus()) return;
       // MODIFIED - SPOTSAGA
       // this.root.focus();
+      this.root.focus({ preventScroll: true });
       this.setRange(this.savedRange);
     }
   }, {
@@ -2556,6 +2557,7 @@ var Selection = function () {
       if (startNode != null) {
         // MODIFIED - SPOTSAGA
         // if (!this.hasFocus()) this.root.focus();
+        if (!this.hasFocus()) this.root.focus({ preventScroll: true });
         // console.log('root.focus skipped!')
 
         var native = (this.getNativeRange() || {}).native;

@@ -88,6 +88,7 @@ class Selection {
     if (this.hasFocus()) return;
     // MODIFIED - SPOTSAGA
     // this.root.focus();
+    this.root.focus({ preventScroll:true });
     this.setRange(this.savedRange);
   }
 
@@ -274,6 +275,7 @@ class Selection {
     if (startNode != null) {
       // MODIFIED - SPOTSAGA
       // if (!this.hasFocus()) this.root.focus();
+      if (!this.hasFocus()) this.root.focus({ preventScroll:true });
       // console.log('root.focus skipped!')
 
       let native = (this.getNativeRange() || {}).native;
