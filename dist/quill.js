@@ -2302,23 +2302,10 @@ var Selection = function () {
     key: 'focus',
     value: function focus() {
       if (this.hasFocus()) return;
-      // this.root.focus();
+      // TODO - remove this?
+      this.root.focus();
       this.setRange(this.savedRange);
     }
-
-    // focusNow() {
-    //   console.log('focusNow', this.root, this.savedRange) // eslint-disable-line no-console
-    //   if (this.savedRange) {
-    //     // this.root.selectionStart = this.savedRange.index
-    //     // this.root.selectionEnd = this.savedRange.index + this.savedRange.length
-    //     console.log('savedRange:', this.root.selectionStart, this.root.selectionEnd) // eslint-disable-line no-console
-    //   }
-    //   this.root.blur()
-    //   this.root.focus();
-
-    //   this.setRange(this.savedRange);
-    // }
-
   }, {
     key: 'format',
     value: function format(_format, value) {
@@ -2568,7 +2555,7 @@ var Selection = function () {
       if (selection == null) return;
       if (startNode != null) {
         // MODIFIED - SPOTSAGA
-        // if (!this.hasFocus()) this.root.focus();
+        if (!this.hasFocus()) this.root.focus();
         // console.log('root.focus skipped!')
 
         var native = (this.getNativeRange() || {}).native;
