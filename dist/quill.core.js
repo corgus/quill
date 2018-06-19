@@ -2302,8 +2302,8 @@ var Selection = function () {
     key: 'focus',
     value: function focus() {
       if (this.hasFocus()) return;
-      // TODO - remove this?
-      this.root.focus();
+      // MODIFIED - SPOTSAGA
+      // this.root.focus();
       this.setRange(this.savedRange);
     }
   }, {
@@ -2555,7 +2555,7 @@ var Selection = function () {
       if (selection == null) return;
       if (startNode != null) {
         // MODIFIED - SPOTSAGA
-        if (!this.hasFocus()) this.root.focus();
+        // if (!this.hasFocus()) this.root.focus();
         // console.log('root.focus skipped!')
 
         var native = (this.getNativeRange() || {}).native;
